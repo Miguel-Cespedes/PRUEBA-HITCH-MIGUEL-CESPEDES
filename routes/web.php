@@ -18,13 +18,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('introduction');
 });
-
 /*
 |--------------------------------------------------------------------------
 | CRUD PAGOS
 |--------------------------------------------------------------------------
 */
-
 Route::get('/pagos', [PaymentsController::class, 'index'])->name('payments');
 
 Route::get('/pagos/crear', [PaymentsController::class, 'create'])->name('payments.create');
