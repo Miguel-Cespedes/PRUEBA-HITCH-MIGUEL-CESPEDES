@@ -19,15 +19,13 @@ Route::get('/', function () {
     return view('introduction');
 });
 
-Route::get('/pagos', [PaymentsController::class, 'index'])->name('payments');
-Route::get('/pagos/crear', [PaymentsController::class, 'create'])->name('payments-create');
-Route::get('punto-extra', [BonusController::class, 'index'])->name('extra-point');
-
 /*
 |--------------------------------------------------------------------------
 | CRUD PAGOS
 |--------------------------------------------------------------------------
 */
+
+Route::get('/pagos', [PaymentsController::class, 'index'])->name('payments');
 
 Route::get('/pagos/crear', [PaymentsController::class, 'create'])->name('payments.create');
 
